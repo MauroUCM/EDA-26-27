@@ -1,6 +1,6 @@
 // Mauro Martinez Montes
 // EDA33
-// Coste: 
+// Coste: lineal O(n)
 
 #include <iostream>
 #include <iomanip>
@@ -48,7 +48,7 @@ int main() {
     // Para la entrada por fichero.
     // Comentar para acepta el reto
 #ifndef DOMJUDGE
-    std::ifstream in("Ejercicios/Tema 1/Ej1/1.in");
+    std::ifstream in("Ejercicios/Tema 1/Ej2/1.in");
     auto cinbuf = std::cin.rdbuf(in.rdbuf()); //save old buf and redirect std::cin to casos.txt
 #endif 
 
