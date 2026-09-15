@@ -1,7 +1,9 @@
 // Mauro Martinez Montes
 // EDA33
-// Coste: 
-// Cuestion: 
+// Coste: Lineal O(n*m)
+// Cuestion: El menor orden posible seguira siendo lineal ya que el algoritmo de 
+// ordenación tiene menor coste que el algoritmo de clasificacion no afectando  
+// al orden total.
 
 #include <iostream>
 #include <iomanip>
@@ -12,9 +14,37 @@ using namespace std;
 // función que resuelve el problema
 void comparaListados(vector<string> const& eda, vector<string> const& tpv,
     vector<string>& comunes, vector<string>& soloEda, vector<string>& soloTpv) {
-    int indEda = 0, indTpv = 0;
+    int indEda = 0, indTpv = 0,
+        edaSiz = eda.size(), tpvSiz = tpv.size();
 
-    
+    while (indEda < edaSiz && indTpv < tpvSiz) {
+        if (eda[indEda] == tpv[indTpv]) {
+            comunes.push_back(eda[indEda]);
+            indEda++;
+            indTpv++;
+        }
+        else if (eda[indEda] < tpv[indTpv]) {
+            soloEda.push_back(eda[indEda]);
+            indEda++;
+        }
+        else {
+            soloTpv.push_back(tpv[indTpv]);
+            indTpv++;
+        }
+    }
+
+    if (indEda >= edaSiz) {
+        while (indTpv < tpvSiz) {
+            soloTpv.push_back(tpv[indTpv]);
+            indTpv++;
+        }
+    }
+    else {
+        while (indEda < edaSiz) {
+            soloEda.push_back(eda[indEda]);
+            indEda++;
+        }
+    }
 
 }
 
