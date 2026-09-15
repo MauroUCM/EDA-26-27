@@ -1,9 +1,3 @@
-// Mauro Martinez Montes
-// EDA33
-// Coste: Lineal O(n+m)
-// Cuestion: El menor orden posible seguira siendo lineal ya que el algoritmo de 
-// ordenación tiene menor coste que el algoritmo de clasificacion no afectando  
-// al orden total.
 
 #include <iostream>
 #include <iomanip>
@@ -13,38 +7,7 @@ using namespace std;
 
 // función que resuelve el problema
 void comparaListados(vector<string> const& eda, vector<string> const& tpv,
-    vector<string>& comunes, vector<string>& soloEda, vector<string>& soloTpv) {
-    int indEda = 0, indTpv = 0,
-        edaSiz = eda.size(), tpvSiz = tpv.size();
-
-    while (indEda < edaSiz && indTpv < tpvSiz) {
-        if (eda[indEda] == tpv[indTpv]) {
-            comunes.push_back(eda[indEda]);
-            indEda++;
-            indTpv++;
-        }
-        else if (eda[indEda] < tpv[indTpv]) {
-            soloEda.push_back(eda[indEda]);
-            indEda++;
-        }
-        else {
-            soloTpv.push_back(tpv[indTpv]);
-            indTpv++;
-        }
-    }
-
-    if (indEda >= edaSiz) {
-        while (indTpv < tpvSiz) {
-            soloTpv.push_back(tpv[indTpv]);
-            indTpv++;
-        }
-    }
-    else {
-        while (indEda < edaSiz) {
-            soloEda.push_back(eda[indEda]);
-            indEda++;
-        }
-    }
+                     vector<string>& comunes, vector<string>& soloEda, vector<string>& soloTpv){
 
 }
 
@@ -62,7 +25,7 @@ void resuelveCaso() {
     cin >> n;
     vector<string> tpv(n);
     for (string& e : tpv) cin >> e;
-    comparaListados(eda, tpv, comunes, soloEda, soloTpv);
+    comparaListados(eda,tpv,comunes,soloEda,soloTpv);
     for (string& e : comunes) cout << e << " ";
     cout << endl;
     for (string& e : soloEda) cout << e << " ";
@@ -77,7 +40,7 @@ int main() {
     // Para la entrada por fichero.
     // Comentar para acepta el reto
 #ifndef DOMJUDGE
-    std::ifstream in("Ejercicios/Tema 1/Ej6/1.in");
+    std::ifstream in("datos.txt");
     auto cinbuf = std::cin.rdbuf(in.rdbuf()); //save old buf and redirect std::cin to casos.txt
 #endif
 
