@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Ejercicios\Tema 1\Ej7\main107.cpp">
+    <ClCompile Include="Ejercicios\Tema 1\Ej10\main110.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
@@ -44,5 +44,11 @@
     <None Include="Ejercicios\Tema 1\Ej6\1.in" />
     <None Include="Ejercicios\Tema 1\Ej7\1.in" />
     <None Include="Ejercicios\Tema 1\Ej7\1.ans" />
+    <None Include="Ejercicios\Tema 1\Ej8\1.ans" />
+    <None Include="Ejercicios\Tema 1\Ej8\1.in" />
+    <None Include="Ejercicios\Tema 1\Ej9\1.ans" />
+    <None Include="Ejercicios\Tema 1\Ej9\1.in" />
+    <None Include="Ejercicios\Tema 1\Ej10\1.ans" />
+    <None Include="Ejercicios\Tema 1\Ej10\1.in" />
   </ItemGroup>
 </Project>

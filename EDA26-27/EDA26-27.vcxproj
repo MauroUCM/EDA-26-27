@@ -139,7 +139,7 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Ejercicios\Tema 1\Ej7\main107.cpp" />
+    <ClCompile Include="Ejercicios\Tema 1\Ej10\main110.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Ejercicios\Tema 0\Ej1\1.ans" />
@@ -156,6 +156,8 @@
     <None Include="Ejercicios\Tema 0\Ej6\1.in" />
     <None Include="Ejercicios\Tema 0\Ej7\1.ans" />
     <None Include="Ejercicios\Tema 0\Ej7\1.in" />
+    <None Include="Ejercicios\Tema 1\Ej10\1.ans" />
+    <None Include="Ejercicios\Tema 1\Ej10\1.in" />
     <None Include="Ejercicios\Tema 1\Ej2\1.ans" />
     <None Include="Ejercicios\Tema 1\Ej2\1.in" />
     <None Include="Ejercicios\Tema 1\Ej3\1.ans" />
@@ -166,6 +168,10 @@
     <None Include="Ejercicios\Tema 1\Ej6\1.in" />
     <None Include="Ejercicios\Tema 1\Ej7\1.ans" />
     <None Include="Ejercicios\Tema 1\Ej7\1.in" />
+    <None Include="Ejercicios\Tema 1\Ej8\1.ans" />
+    <None Include="Ejercicios\Tema 1\Ej8\1.in" />
+    <None Include="Ejercicios\Tema 1\Ej9\1.ans" />
+    <None Include="Ejercicios\Tema 1\Ej9\1.in" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
