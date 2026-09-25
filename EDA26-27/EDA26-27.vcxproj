@@ -181,9 +181,11 @@
     <None Include="Ejercicios\Tema 2\Ej3\2.in" />
     <None Include="Ejercicios\Tema 2\Ej4\1.ans" />
     <None Include="Ejercicios\Tema 2\Ej4\1.in" />
+    <None Include="Ejercicios\Tema 2\Ej5\1.ans" />
+    <None Include="Ejercicios\Tema 2\Ej5\1.in" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Ejercicios\Tema 2\Ej4\main204.cpp" />
+    <ClCompile Include="Ejercicios\Tema 2\Ej5\main205.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
