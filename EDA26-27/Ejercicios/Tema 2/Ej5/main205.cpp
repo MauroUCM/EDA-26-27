@@ -1,6 +1,6 @@
 // Mauro Martinez Montes
 // EDA33
-// Coste: 
+// Coste: Lineal O(n)
 
 #include <iostream>
 #include <fstream>
@@ -9,34 +9,42 @@
 using namespace std;
 
 // Aqui la funcion recursiva que resuelve el problema
-int resolver(vector<int>& datos, int ini, int fin) {
-    if (fin - ini <= 1) {
+int resolver(vector<int>& datos, int ini, int fin, bool& isCaus) {
+    if (fin - ini <= 1) {   // caso base
         if (datos[ini] % 2 == 0) {
             return 1;
         }
-        else return -1;
+        else {
+            return 0;
+        }
     }
 
-    int mid = (fin + ini) / 2,
-        totDiff = resolver(datos, ini, mid) + resolver(datos, mid, fin);
+    int mid = (ini + fin) / 2,
+        izq = resolver(datos, ini, mid, isCaus),
+        dra = resolver(datos, mid, fin, isCaus);
 
-    return totDiff;
+    if (abs(dra - izq) > 2) isCaus = false;
+
+    return izq + dra;
 }
 
 // Tratar cada caso
 bool resuelveCaso() {
     // Lectura de los datos
-    int num;
-    cin >> num;
-    if (num == 0) return false;
-    vector<int> v(num);
-    for (int i = 0; i < num; ++i) {
+    int aux;
+    bool isCaus = true;
+
+    cin >> aux;
+    if (aux == 0) return false;
+    vector<int> v(aux);
+    for (int i = 0; i < aux; ++i) {
         cin >> v[i];
     }
 
+    aux = abs(resolver(v, 0, v.size(), isCaus));
+
     // Escribir los resultados
-    int diff = resolver(v, 0, v.size());
-    if (abs(diff) <= 2) cout << "SI" << '\n';
+    if (isCaus) cout << "SI" << '\n';
     else cout << "NO\n";
     return true;
 }
