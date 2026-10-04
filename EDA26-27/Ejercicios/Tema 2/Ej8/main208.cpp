@@ -1,6 +1,6 @@
 // Mauro Martinez Montes
 // EDA33
-// Coste: O(n*logn) siendo n el tamaño del vector
+// Coste: O(n*log(n)), n = tamaño del vector
 
 #include <iostream>
 #include <iomanip>
@@ -10,22 +10,22 @@
 using namespace std;
 
 // función que resuelve el problema
-int resolver(vector<int>& datos, int ini, int fin) {
+int resolver(vector<int>& v, int ini, int fin) {
     if (fin - ini <= 1) {
-        return datos[ini];
+        return v[ini];
     }
 
     int mid = (fin + ini) / 2;
 
-    if (datos[mid - 1] < datos[mid]) return resolver(datos, ini, mid);
-    else return resolver(datos, mid, fin);
+    if (v[ini] < v[mid]) return resolver(v, ini, mid);
+    else return resolver(v, mid, fin);
 }
 
 // Resuelve un caso de prueba, leyendo de la entrada la
 // configuración, y escribiendo la respuesta
 bool resuelveCaso() {
     // leer los datos de la entrada
-    int num, aux;
+    int num;
     cin >> num;
 
     if (!std::cin)
@@ -33,7 +33,7 @@ bool resuelveCaso() {
 
     vector<int> datos(num);
     for (int& aux : datos) cin >> aux;
-
+    
     // escribir sol
     cout << resolver(datos, 0, datos.size()) << "\n";
 
@@ -44,7 +44,7 @@ int main() {
     // Para la entrada por fichero.
     // Comentar para acepta el reto
 #ifndef DOMJUDGE
-    std::ifstream in("Ejercicios/Tema 2/Ej7/1.in");
+    std::ifstream in("Ejercicios/Tema 2/Ej8/1.in");
     auto cinbuf = std::cin.rdbuf(in.rdbuf()); //save old buf and redirect std::cin to casos.txt
 #endif 
 
