@@ -17,7 +17,15 @@ bool resolver(const vector<int>& v, const int& busc, int ini, int fin) {
     }
 
     int mid = (fin + ini) / 2;
-    
+    if (v[ini] < v[mid]) {  // si el "corte" esta en la segunda mitad...
+        if (busc >= v[ini] && busc < v[mid]) return resolver(v, busc, ini, mid);
+        else return resolver(v, busc, mid, fin);
+    }
+    else   // si el "corte" esta en la primera mitad...
+    {
+        if (busc >= v[mid] && busc <= v[fin - 1]) return resolver(v, busc, mid, fin);
+        else return resolver(v, busc, ini, mid);
+    }
 
     return false;
 }

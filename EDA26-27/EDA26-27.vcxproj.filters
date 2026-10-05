@@ -69,6 +69,8 @@
     <None Include="Ejercicios\Tema 2\Ej8\1.in" />
     <None Include="Ejercicios\Tema 2\Ej9\1.ans" />
     <None Include="Ejercicios\Tema 2\Ej9\1.in" />
+    <None Include="Ejercicios\Tema 2\Ej10\1.ans" />
+    <None Include="Ejercicios\Tema 2\Ej10\1.in" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Ejercicios\Tema 2\Ej9\main209.cpp">
