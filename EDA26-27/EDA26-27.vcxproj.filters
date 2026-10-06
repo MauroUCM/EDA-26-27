@@ -71,9 +71,11 @@
     <None Include="Ejercicios\Tema 2\Ej9\1.in" />
     <None Include="Ejercicios\Tema 2\Ej10\1.ans" />
     <None Include="Ejercicios\Tema 2\Ej10\1.in" />
+    <None Include="Ejercicios\Tema 2\Ej11\1.ans" />
+    <None Include="Ejercicios\Tema 2\Ej11\1.in" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Ejercicios\Tema 2\Ej10\main210.cpp">
+    <ClCompile Include="Ejercicios\Tema 2\Ej11\main211.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
