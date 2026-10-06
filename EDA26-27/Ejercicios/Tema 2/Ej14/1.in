@@ -1,34 +1,23 @@
-// Mauro Martinez Montes
-// EDA33
-// Coste: O(log(n)): n = tamaño del vector
+3
+5
+2 3 34 78 99
+1
+6
+4
+1 2 3 4
+
+
+
+// Plantilla para el ejercicio
 
 #include <iostream>
 #include <iomanip>
 #include <fstream>
 #include <vector>
-
 using namespace std;
 
 // función que resuelve el problema
-int resolver(const vector<int>& v, int ini, int fin) {
-    if (fin - ini <= 1) { 
-        return ini;
-    }
-
-    int mid = (ini + fin) / 2;
-    if (mid == v.size() - 1) {
-        return mid;
-    }
-    if (mid % 2 == 0) { // mid es par
-        if (v[mid] == v[mid + 1]) return resolver(v, mid, fin);
-        else if (v[mid] != v[mid - 1]) return mid;
-        else return resolver(v, ini, mid);
-    }
-    else {  // mid impar
-        if (v[mid] == v[mid + 1]) return resolver(v, ini, mid);
-        else if (v[mid] != v[mid - 1]) return mid;
-        else return resolver(v, mid, fin);
-    }
+int resolver(...) {
 }
 
 // Resuelve un caso de prueba, leyendo de la entrada la
@@ -37,11 +26,9 @@ void resuelveCaso() {
     // leer los datos de la entrada
     int n;
     cin >> n;
-    vector<int> v(n);
-    for (int& e : v) cin >> e;
-
-    // Mostrar el resultado
-    cout << resolver(v, 0, v.size()) << "\n";
+    vector<int> sec(n);
+    for (int& e : sec) cin >> e;
+    cout << resolver(...) << endl;
 }
 
 //#define DOMJUDGE
@@ -49,7 +36,7 @@ int main() {
     // Para la entrada por fichero.
     // Comentar para acepta el reto
 #ifndef DOMJUDGE
-    std::ifstream in("Ejercicios/Tema 2/Ej13/1.in");
+    std::ifstream in("input3.txt");
     auto cinbuf = std::cin.rdbuf(in.rdbuf()); //save old buf and redirect std::cin to casos.txt
 #endif
 
