@@ -15,10 +15,10 @@ int resolver(const vector<int>& v, int ini, int fin) {
         return v[ini];
     }
 
-
-
-    
-    return -23;
+    int mid = (fin + ini) / 2;
+    if (v[mid] % 2 != 0) return v[mid];
+    if (v[mid] != v[0] + (mid * 2)) return resolver(v, ini, mid);
+    else return resolver(v, mid, fin);
 }
 
 // Resuelve un caso de prueba, leyendo de la entrada la
