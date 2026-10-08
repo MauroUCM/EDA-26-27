@@ -79,10 +79,12 @@
     <None Include="Ejercicios\Tema 2\Ej14\1.in" />
     <None Include="Ejercicios\Tema 4\Ej1\1.ans" />
     <None Include="Ejercicios\Tema 4\Ej1\1.in" />
+    <None Include="Ejercicios\Tema 4\Ej2\1.ans" />
+    <None Include="Ejercicios\Tema 4\Ej2\1.in" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Ejercicios\Tema 4\Ej1\main401.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
+    <ClInclude Include="Ejercicios\Tema 4\Ej1\Set.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
