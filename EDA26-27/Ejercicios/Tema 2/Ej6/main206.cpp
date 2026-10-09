@@ -13,6 +13,10 @@ using namespace std;
 bool elemento_situado(const vector<int>& datos, int ini, int fin)
 {
     if (fin - ini <= 1) {
+        if (datos.size() == 0) {
+            return false;
+        }
+
         if (datos[ini] == ini) return true;
         else return false;
     }
@@ -35,10 +39,9 @@ void resuelveCaso() {
         cin >> aux;
         datos.push_back(aux);
     }
-    if (datos.size() != 0) {
-        if (elemento_situado(datos, 0, datos.size())) cout << "SI\n";
-        else cout << "NO\n";
-    } else cout << "NO\n";
+
+    if (elemento_situado(datos, 0, datos.size())) cout << "SI\n";
+    else cout << "NO\n";
 }
 
 int main() {

@@ -208,6 +208,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Ejercicios\Tema 4\Ej1\Set.h" />
+    <ClInclude Include="Ejercicios\Tema 4\Ej2\Hora.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Ejercicios\Tema 4\Ej2\main402.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

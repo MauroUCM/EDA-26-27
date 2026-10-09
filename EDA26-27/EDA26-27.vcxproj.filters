@@ -86,5 +86,13 @@
     <ClInclude Include="Ejercicios\Tema 4\Ej1\Set.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="Ejercicios\Tema 4\Ej2\Hora.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Ejercicios\Tema 4\Ej2\main402.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
