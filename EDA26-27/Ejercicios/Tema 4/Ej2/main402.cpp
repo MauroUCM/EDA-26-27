@@ -6,28 +6,43 @@
 #include <iomanip>
 #include <fstream>
 #include <vector>
+#include "Hora.h"
 
 using namespace std;
 
+const int& buscarMinima(const vector<Hora>& trenes, const Hora& consulta, int ini, int fin) {
+
+    return 0;
+}
+
 // función que resuelve el problema
-void resolver() {
-
-
+void consultar(const vector<Hora>& trenes, Hora& consulta) {
+    if (consulta.isValid()) {
+        int sol = buscarMinima(trenes, consulta, 0, trenes.size());
+        if (sol == -1) cout << "NO\n";
+        else cout << trenes[sol] << "\n";
+    }
+    else cout << "ERROR\n";
 }
 
 // Resuelve un caso de prueba, leyendo de la entrada la
 // configuración, y escribiendo la respuesta
 bool resuelveCaso() {
     // leer los datos de la entrada
-    int numTren, numHor;
-    cin >> numTren >> numHor;
+    int numTren, numCons;
+    cin >> numTren >> numCons;
 
-    if (numTren == 0 && numHor == 0)
+    if (numTren == 0 && numCons == 0)
         return false;
     
+    vector<Hora> trenes(numTren), consultas(numCons);
+    for (Hora& t : trenes) cin >> t; 
+    for (Hora& c : consultas) cin >> c;
+
     // escribir sol
-
-
+    for (Hora& cons : consultas) consultar(trenes, cons);
+    cout << "---\n";
+            
     return true;
 }
 
