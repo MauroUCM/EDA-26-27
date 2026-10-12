@@ -1,6 +1,6 @@
 // Mauro Martinez Montes
 // EDA33
-// Coste: 
+// Coste: O(n): n = numero de trenes
 
 #include <iostream>
 #include <iomanip>
@@ -10,17 +10,38 @@
 
 using namespace std;
 
-const int& buscarMinima(const vector<Hora>& trenes, const Hora& consulta, int ini, int fin) {
-
-    return 0;
-}
+//const int& buscarMinima(const vector<Hora>& trenes, const Hora& consulta, int ini, int fin) {
+//    if (fin - ini <= 1) {
+//        if (consulta <= trenes[ini]) return ini;
+//        else return -1;
+//    }
+//    int mid = (fin + ini) / 2;
+//
+//    if (trenes[mid] < consulta) return buscarMinima(trenes, consulta, mid, fin);
+//    else return buscarMinima(trenes, consulta, ini, mid);
+//
+//    return 0;
+//}
 
 // función que resuelve el problema
 void consultar(const vector<Hora>& trenes, Hora& consulta) {
     if (consulta.isValid()) {
-        int sol = buscarMinima(trenes, consulta, 0, trenes.size());
-        if (sol == -1) cout << "NO\n";
-        else cout << trenes[sol] << "\n";
+        if (trenes[trenes.size() - 1] < consulta) {
+            cout << "NO\n";
+        }
+        else {
+            for (int p = 0; p < trenes.size(); p++) {
+                if (consulta <= trenes[p]) {
+                    cout << trenes[p] << "\n";
+                    break;
+                }
+            }
+        }
+
+        //int sol = buscarMinima(trenes, consulta, 0, trenes.size());
+        ////cout << consulta << " ";
+        //if (sol == -1) cout << "NO\n";
+        //else cout << trenes[sol] << "\n";
     }
     else cout << "ERROR\n";
 }

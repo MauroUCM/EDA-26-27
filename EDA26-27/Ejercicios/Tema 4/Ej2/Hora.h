@@ -18,7 +18,7 @@ public:
 	friend istream& operator>>(istream& in, Hora& s);
 	friend ostream& operator<<(ostream& out, const Hora& s);
 	friend bool operator<(const Hora& min, const Hora& may);
-	friend bool operator>(const Hora& min, const Hora& may);
+	friend bool operator<=(const Hora& min, const Hora& may);
 
 private:
 	int hora, minuto, segundo;
@@ -52,16 +52,16 @@ ostream& operator<<(ostream& out, const Hora& set) {
 
 bool operator<(const Hora& min, const Hora& may) {
 	if (min.hora < may.hora) return true;
-	else if (min.minuto < may.hora) return true;
-	else if (min.segundo < min.segundo) return true;
+	else if (min.hora == may.hora && min.minuto < may.minuto) return true;
+	else if (min.hora == may.hora && min.minuto == may.minuto && min.segundo < min.segundo) return true;
 	else return false;
 }
 
-bool operator>(const Hora& min, const Hora& may) {
-	if (min.hora > may.hora) return true;
-	else if (min.minuto > may.hora) return true;
-	else if (min.segundo > min.segundo) return true;
-	else return false;
+bool operator<=(const Hora& min, const Hora& may) {
+	if (min.hora > may.hora) return false;
+	else if (min.hora == may.hora && min.minuto > may.minuto) return false;
+	else if (min.hora == may.hora && min.minuto == may.minuto && min.segundo > min.segundo) return false;
+	else return true;
 }
 
 #endif //SET_H
