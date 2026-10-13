@@ -23,6 +23,7 @@ public:
 private:
 	int hora, minuto, segundo;
 
+	static void escribirDigito(const int& digit);
 };
 
  Hora::Hora()
@@ -38,6 +39,11 @@ private:
 	 else return true;
  }
 
+ void Hora::escribirDigito(const int& digit) {
+	 if (digit < 10) cout << "0" << digit;
+	 else cout << digit;
+ }
+
 istream& operator>>(istream& in, Hora& set) {
 	char aux;
 	in >> set.hora >> aux >> set.minuto >> aux >> set.segundo;
@@ -46,21 +52,26 @@ istream& operator>>(istream& in, Hora& set) {
 }
 
 ostream& operator<<(ostream& out, const Hora& set) {
-	out << set.hora << ":" << set.minuto << ":" << set.segundo;
+	set.escribirDigito(set.hora);
+	out << ":";
+	set.escribirDigito(set.minuto);
+	out << ":";
+	set.escribirDigito(set.segundo);
+
 	return out;
 }
 
 bool operator<(const Hora& min, const Hora& may) {
 	if (min.hora < may.hora) return true;
 	else if (min.hora == may.hora && min.minuto < may.minuto) return true;
-	else if (min.hora == may.hora && min.minuto == may.minuto && min.segundo < min.segundo) return true;
+	else if (min.hora == may.hora && min.minuto == may.minuto && min.segundo < may.segundo) return true;
 	else return false;
 }
 
 bool operator<=(const Hora& min, const Hora& may) {
 	if (min.hora > may.hora) return false;
 	else if (min.hora == may.hora && min.minuto > may.minuto) return false;
-	else if (min.hora == may.hora && min.minuto == may.minuto && min.segundo > min.segundo) return false;
+	else if (min.hora == may.hora && min.minuto == may.minuto && min.segundo > may.segundo) return false;
 	else return true;
 }
 
