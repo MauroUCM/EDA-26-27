@@ -139,9 +139,16 @@ public:
             return false;
     }
 
+    // Resta de conjuntos. O(n^2)), n = nelems
+    // Porque remove O(n) y contains O(log(n)) es recorrido n veces
     Set<T> operator-(const Set<T>& other) const {
-        
-        return other;
+        Set<T> sol;
+
+        for (int i = 0; i < nelems; i++) {
+            if (!other.contains(array[i])) sol.add(array[i]);
+        }
+
+        return sol;
     }
 
     template <class E>
@@ -231,11 +238,9 @@ protected:
 
 template <class T>
 ostream& operator<<(ostream& out, Set<T> const& set) {
-    out << "{";
     for (int i = 0; i < set.nelems-1; i++)
-        out << set.array[i] << ",";
+        out << set.array[i] << " ";
     if (set.nelems > 0) out << set.array[set.nelems-1];
-    out << "}";
     return out;
 }
 
