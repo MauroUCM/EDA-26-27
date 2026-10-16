@@ -81,6 +81,10 @@
     <None Include="Ejercicios\Tema 4\Ej1\1.in" />
     <None Include="Ejercicios\Tema 4\Ej2\1.ans" />
     <None Include="Ejercicios\Tema 4\Ej2\1.in" />
+    <None Include="Ejercicios\Tema 4\Ej3\1.in" />
+    <None Include="Ejercicios\Tema 4\Ej3\1.ans" />
+    <None Include="Ejercicios\Tema 4\Ej8\1.ans" />
+    <None Include="Ejercicios\Tema 4\Ej8\1.in" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Ejercicios\Tema 4\Ej1\Set.h">
@@ -89,9 +93,15 @@
     <ClInclude Include="Ejercicios\Tema 4\Ej2\Hora.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="Ejercicios\Tema 4\Ej3\polinomio.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Ejercicios\Tema 4\Ej8\Set.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Ejercicios\Tema 4\Ej2\main402.cpp">
+    <ClCompile Include="Ejercicios\Tema 4\Ej8\main408.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
