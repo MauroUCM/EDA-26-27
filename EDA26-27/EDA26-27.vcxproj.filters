@@ -101,7 +101,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Ejercicios\Tema 4\Ej3\main403.cpp">
+    <ClCompile Include="Ejercicios\Tema 6\Ej1\main601.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>

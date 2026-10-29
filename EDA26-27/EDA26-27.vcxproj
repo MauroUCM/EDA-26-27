@@ -217,7 +217,7 @@
     <ClInclude Include="Ejercicios\Tema 4\Ej8\Set.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Ejercicios\Tema 4\Ej3\main403.cpp" />
+    <ClCompile Include="Ejercicios\Tema 6\Ej1\main601.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
