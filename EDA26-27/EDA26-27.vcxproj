@@ -209,6 +209,8 @@
     <None Include="Ejercicios\Tema 4\Ej3\1.in" />
     <None Include="Ejercicios\Tema 4\Ej8\1.ans" />
     <None Include="Ejercicios\Tema 4\Ej8\1.in" />
+    <None Include="Ejercicios\Tema 5\Ej12\1.ans" />
+    <None Include="Ejercicios\Tema 5\Ej12\1.in" />
     <None Include="Ejercicios\Tema 6\Ej1\1.ans" />
     <None Include="Ejercicios\Tema 6\Ej1\1.in" />
   </ItemGroup>
@@ -217,10 +219,11 @@
     <ClInclude Include="Ejercicios\Tema 4\Ej2\Hora.h" />
     <ClInclude Include="Ejercicios\Tema 4\Ej3\polinomio.h" />
     <ClInclude Include="Ejercicios\Tema 4\Ej8\Set.h" />
+    <ClInclude Include="Ejercicios\Tema 5\Ej12\queue_eda.h" />
     <ClInclude Include="Ejercicios\Tema 6\Ej1\bintree_eda.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Ejercicios\Tema 6\Ej1\main601.cpp" />
+    <ClCompile Include="Ejercicios\Tema 5\Ej12\main512.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
