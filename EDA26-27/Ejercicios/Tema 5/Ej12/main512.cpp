@@ -1,6 +1,6 @@
 // Mauro Martinez Montes
 // EDA33
-// Coste: 
+// Coste: O(n), siendo n el tamaño del vector
 
 #include <iostream>
 #include <iomanip>
@@ -14,8 +14,28 @@ class queue_plus : public queue<T> {
     using Nodo = typename queue<T>::Nodo;
 
 public:
+    // mueve al elemento b de su posicion a la posicion inmediatamente detras del elemento a
     void cuela(const T& a, const T& b) {
         // Ojo que para acceder a prim o ult hay que escribir this->prim o this->ult
+        Nodo *ins = this->prim, *extPrev = this->prim;
+
+        // busca los elementos
+        while (ins != this->ult && ins->elem != a) ins = ins->sig;
+        extPrev = ins;
+        while (extPrev != this->ult && extPrev->sig->elem != b) extPrev = extPrev->sig;
+
+        // lo inserta
+        if (extPrev != this->ult && ins->elem == a && extPrev->sig->elem == b) {
+            Nodo* ext = extPrev->sig;
+            extPrev->sig = ext->sig;
+            ext->sig = ins->sig;
+            ins->sig = ext;
+
+            // si el nuevo insertado es el final lo anota
+            if (extPrev->sig == nullptr) {  
+                this->ult = extPrev;
+            }
+        }
     }
 };
 
