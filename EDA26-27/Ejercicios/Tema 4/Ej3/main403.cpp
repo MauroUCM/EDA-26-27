@@ -23,8 +23,6 @@ bool resuelveCaso() {
     if (!std::cin)
         return false;
 
-    
-
     // escribir sol
 
 

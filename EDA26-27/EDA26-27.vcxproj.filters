@@ -114,5 +114,8 @@
     <ClCompile Include="Ejercicios\Tema 5\Ej12\main512.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
+    <ClCompile Include="Ejercicios\Tema 4\Ej3\main403.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
