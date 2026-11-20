@@ -1,37 +1,69 @@
 // Mauro Martinez Montes
 // EDA33
-// Coste: 
+// Coste: O(n^2) siendo n el número de peliculas por el número de actores en cada una
 
 #include <iostream>
 #include <iomanip>
 #include <fstream>
 #include <vector>
+#include <unordered_map>
+#include <map>
 using namespace std;
 
 
 using Pelicula = string;
 using Actor = string;
 
-struct RepartosPeliculas {
-    Pelicula pel;
-};
+using Reparto = unordered_map<Actor, int>;
+using RepartosPeliculas = unordered_map<Pelicula, Reparto>;
 
 void leerRepartos(int numPeliculas, RepartosPeliculas& peliculas) {
     Pelicula peli; int numActores;
     Actor actor; int minutos;
     for (int i = 0; i < numPeliculas; ++i) {
         cin >> peli; cin >> numActores;
-        //...
+        Reparto repPel;
             for (int j = 0; j < numActores; ++j) {
                 cin >> actor >> minutos;
-                //...
+                repPel.insert({ actor, minutos });
             }
+        peliculas.insert({peli, repPel});
     }
 }
 
 
 void procesarEmisiones(RepartosPeliculas const& repartos, vector<string> const& secEmisiones) {
-    //...
+    unordered_map<Pelicula, int> auxEmi;
+    Pelicula mostPeli = *secEmisiones.begin();
+    map<Actor, int> minutosPorActor;
+    int auxHighest = 0;
+
+    for (string emision : secEmisiones) {
+        if (!auxEmi.contains(emision)) auxEmi.insert({ emision, 1 });
+        else auxEmi.at(emision)++;
+
+        if (auxEmi.at(emision) >= auxEmi.at(mostPeli)) {
+            mostPeli = emision;
+        }
+
+        for (auto a = repartos.at(emision).begin(); a != repartos.at(emision).end(); a++) {
+            if (minutosPorActor.contains(a->first)) {
+                minutosPorActor.at(a->first) += a->second;
+            }
+            else minutosPorActor.insert_or_assign(a->first, a->second);
+
+            if (minutosPorActor.at(a->first) > auxHighest) auxHighest = minutosPorActor.at(a->first);
+        }
+    }
+
+    // salida
+    cout << auxEmi.at(mostPeli) << " " << mostPeli << "\n";
+    cout << auxHighest << " ";
+    for (auto b = minutosPorActor.begin(); b != minutosPorActor.end(); b++) {
+        if (b->second == auxHighest) cout << b->first << " ";
+    }
+
+    cout << "\n";
 }
 
 
