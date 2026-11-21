@@ -213,6 +213,8 @@
     <None Include="Ejercicios\Tema 5\Ej12\1.in" />
     <None Include="Ejercicios\Tema 5\Ej1\1.ans" />
     <None Include="Ejercicios\Tema 5\Ej1\1.in" />
+    <None Include="Ejercicios\Tema 5\Ej2\1.ans" />
+    <None Include="Ejercicios\Tema 5\Ej2\1.in" />
     <None Include="Ejercicios\Tema 6\Ej10\1.ans" />
     <None Include="Ejercicios\Tema 6\Ej10\1.in" />
     <None Include="Ejercicios\Tema 6\Ej1\1.ans" />
@@ -230,7 +232,7 @@
     <ClInclude Include="Ejercicios\Tema 6\Ej1\bintree_eda.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Ejercicios\Tema 5\Ej1\main501.cpp" />
+    <ClCompile Include="Ejercicios\Tema 5\Ej2\main502.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
