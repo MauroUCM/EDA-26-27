@@ -226,12 +226,11 @@
     <ClInclude Include="Ejercicios\Tema 4\Ej3\polinomio.h" />
     <ClInclude Include="Ejercicios\Tema 4\Ej8\Set.h" />
     <ClInclude Include="Ejercicios\Tema 5\Ej12\queue_eda.h" />
-    <ClInclude Include="Ejercicios\Tema 5\Ej1\stack_eda.h" />
     <ClInclude Include="Ejercicios\Tema 6\Ej10\bintree_eda.h" />
     <ClInclude Include="Ejercicios\Tema 6\Ej1\bintree_eda.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Ejercicios\Tema 7\Ej6\main706.cpp" />
+    <ClCompile Include="Ejercicios\Tema 5\Ej1\main501.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

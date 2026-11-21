@@ -1,20 +1,45 @@
 // Mauro Martinez Montes
 // EDA33
-// Coste: 
+// Coste: O(n), siendo n el tamaño del string
 
 #include <iostream>
 #include <iomanip>
 #include <fstream>
-#include <vector>
-#include "stack_eda.h"
+#include <stack>
+#include <string>
 
 using namespace std;
 
 // función que resuelve el problema
-bool resolver() {
-    
+bool resolver(const string& datos) {
+    stack<char> parentes;
 
-    return true;
+    for (char i : datos) {
+        if (i == '(' || i == '[' || i == '{') parentes.push(i);
+        else if (i == ')' || i == ']' || i == '}') {
+            if (parentes.empty()) return false;
+            switch (i)
+            {
+            case ')':
+                if (parentes.top() == '(') parentes.pop();
+                else return false;
+                break;
+            case ']':
+                if (parentes.top() == '[') parentes.pop();
+                else return false;
+                break;
+            case '}':
+                if (parentes.top() == '{') parentes.pop();
+                else return false;
+                break;
+            default:
+                return false;
+                break;
+            }
+        }
+    }
+
+    return parentes.empty();
 }
 
 // Resuelve un caso de prueba, leyendo de la entrada la
@@ -22,16 +47,14 @@ bool resolver() {
 bool resuelveCaso() {
     // leer los datos de la entrada
     string datos;
-
-
-   
+    getline(cin, datos);
 
     if (!std::cin)
         return false;
 
-
     // escribir sol
-
+    if (resolver(datos)) cout << "SI\n";
+    else cout << "NO\n";
 
     return true;
 }

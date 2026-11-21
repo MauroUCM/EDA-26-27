@@ -118,12 +118,9 @@
     <ClInclude Include="Ejercicios\Tema 6\Ej10\bintree_eda.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="Ejercicios\Tema 5\Ej1\stack_eda.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Ejercicios\Tema 7\Ej6\main706.cpp">
+    <ClCompile Include="Ejercicios\Tema 5\Ej1\main501.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
