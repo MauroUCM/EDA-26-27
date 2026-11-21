@@ -1,6 +1,6 @@
 // Mauro Martinez Montes
 // EDA33
-// Coste: 
+// Coste: O(n) para ambos, siendo n el tamaño de la pila
 
 #include <iostream>
 #include <iomanip>
@@ -11,6 +11,15 @@ using namespace std;
 
 // función externa que resuelve el problema sobre stack
 void duplicar(stack<int>& s) {
+    stack<int> aux;
+
+    while (!s.empty()) {
+        aux.push(s.top());
+        aux.push(s.top());
+        s.pop();
+    }
+
+    s.swap(aux);
 }
 
 // Clase extendida con operación interna duplicar que reaprovecha nodos existentes
@@ -20,9 +29,15 @@ class LinkedListStack_plus : public LinkedListStack<T> {
 
 public:
     void duplicar() {
+        Nodo* nod = this->cima;
+
+        while (nod != nullptr) {
+            Nodo* newNod = new Nodo(nod->elem, nod->sig);
+            nod->sig = newNod;
+            nod = newNod->sig;
+        }
     }
 };
-
 
 // Resuelve un caso de prueba, leyendo de la entrada la
 // configuración, y escribiendo la respuesta
