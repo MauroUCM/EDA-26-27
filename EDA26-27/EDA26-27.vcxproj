@@ -217,6 +217,10 @@
     <None Include="Ejercicios\Tema 5\Ej2\1.in" />
     <None Include="Ejercicios\Tema 5\Ej3\1.ans" />
     <None Include="Ejercicios\Tema 5\Ej3\1.in" />
+    <None Include="Ejercicios\Tema 5\Ej4\1.ans" />
+    <None Include="Ejercicios\Tema 5\Ej4\1.in" />
+    <None Include="Ejercicios\Tema 5\Ej5\1.ans" />
+    <None Include="Ejercicios\Tema 5\Ej5\1.in" />
     <None Include="Ejercicios\Tema 6\Ej10\1.ans" />
     <None Include="Ejercicios\Tema 6\Ej10\1.in" />
     <None Include="Ejercicios\Tema 6\Ej1\1.ans" />
@@ -231,11 +235,13 @@
     <ClInclude Include="Ejercicios\Tema 4\Ej8\Set.h" />
     <ClInclude Include="Ejercicios\Tema 5\Ej12\queue_eda.h" />
     <ClInclude Include="Ejercicios\Tema 5\Ej3\LinkedListStack.h" />
+    <ClInclude Include="Ejercicios\Tema 5\Ej4\queue_eda.h" />
+    <ClInclude Include="Ejercicios\Tema 5\Ej5\queue_eda.h" />
     <ClInclude Include="Ejercicios\Tema 6\Ej10\bintree_eda.h" />
     <ClInclude Include="Ejercicios\Tema 6\Ej1\bintree_eda.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Ejercicios\Tema 5\Ej3\main503.cpp" />
+    <ClCompile Include="Ejercicios\Tema 5\Ej5\main505.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

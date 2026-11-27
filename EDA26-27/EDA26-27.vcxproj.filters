@@ -99,6 +99,10 @@
     <None Include="Ejercicios\Tema 5\Ej2\1.in" />
     <None Include="Ejercicios\Tema 5\Ej3\1.ans" />
     <None Include="Ejercicios\Tema 5\Ej3\1.in" />
+    <None Include="Ejercicios\Tema 5\Ej4\1.ans" />
+    <None Include="Ejercicios\Tema 5\Ej4\1.in" />
+    <None Include="Ejercicios\Tema 5\Ej5\1.in" />
+    <None Include="Ejercicios\Tema 5\Ej5\1.ans" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Ejercicios\Tema 4\Ej1\Set.h">
@@ -125,9 +129,15 @@
     <ClInclude Include="Ejercicios\Tema 5\Ej3\LinkedListStack.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="Ejercicios\Tema 5\Ej4\queue_eda.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Ejercicios\Tema 5\Ej5\queue_eda.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Ejercicios\Tema 5\Ej3\main503.cpp">
+    <ClCompile Include="Ejercicios\Tema 5\Ej5\main505.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
